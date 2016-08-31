@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+
+    "name": "d2xmr",
+    "description": "This extension download resources to your xiaomi router",
+    "version": "0.1",
+
+    "browser_action": {
+        "default_icon": "/res/icon.jpg",
+        "default_title": "d2xmr"
+    },
+    
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["/js/jquery.min.js","/js/base64.js","/js/main.js"],
+        "run_at": "document_end",
+        "all_frames": true
+    }]
+}
